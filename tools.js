@@ -2,4 +2,4 @@ var switchPage = function(number) {
 	var all = document.getElementsByTagName("page")
 	console.log(all)
 }
-export default switchPage
+export switchPage
