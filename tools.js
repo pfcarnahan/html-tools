@@ -4,7 +4,7 @@ var switchPage = function(page) {
 		var attrs = all[i].attributes
 		for(var j = 0; j < attrs.length; j++) {
 			if(attrs.item(j).name === "page") {
-				if(attrs.item(j).value === toPage) {
+				if(attrs.item(j).value === page) {
 					all[i].style.display = "block"
 				} else {
 					all[i].style.display = "none"
