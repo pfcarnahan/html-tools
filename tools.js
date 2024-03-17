@@ -22,7 +22,7 @@ var bindButtons = function(className) {
 	var buttons = document.querySelectorAll(`button.${className}`)
 	for(var i = 0; i < buttons.length; i++) {
 		var attrs = buttons[i].attributes
-		for(var j = 0; j < attrs[i].length; j++) {
+		for(var j = 0; j < attrs.length; j++) {
 			if(attrs.item(j).name === "to") {
 				bindButton(buttons[i].id, attrs.item(j).value)
 				break;
