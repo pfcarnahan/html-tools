@@ -24,7 +24,7 @@ var bindButtons = function(className) {
 		var attrs = buttons[i].attributes
 		for(var j = 0; j < attrs.length; j++) {
 			if(attrs.item(j).name === "to") {
-				bindButton(buttons[i].id, attrs.item(j).value)
+				buttons[i].addEventListener("click", () => switchPage(attrs.item(j).value))
 				break;
 			}
 		}
