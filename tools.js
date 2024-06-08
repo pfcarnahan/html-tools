@@ -19,7 +19,7 @@ var bindButton = function(id, page) {
 } // Binds button with id 'id' to switch page to 'page'
 
 var bindButtons = function(className) {
-	var buttons = document.querySelectorAll(`button.${className}:not([to="how"])`)
+	var buttons = document.querySelectorAll(`button.${className}`)
 	var addListen = (elt,to) => {
 	    elt.addEventListener("click",() => switchPage(to))
 	}
