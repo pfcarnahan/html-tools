@@ -20,11 +20,14 @@ var bindButton = function(id, page) {
 
 var bindButtons = function(className) {
 	var buttons = document.querySelectorAll(`button.${className}`)
+	var addListen = (elt,to) => {
+	    elt.addEventListener("click",() => switchPage(to))
+	}
 	for(var i = 0; i < buttons.length; i++) {
-		var attrs = buttons[i].attributes
+		attrs = buttons[i].attributes
 		for(var j = 0; j < attrs.length; j++) {
 			if(attrs.item(j).name === "to") {
-				bindButton(buttons[i].id, attrs.item(j).value)
+				addListen(buttons[i],buttons[i].attributes.item(j).value)
 				break;
 			}
 		}
